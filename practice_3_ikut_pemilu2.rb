@@ -28,7 +28,7 @@ end
 # Input: array dari warga
 # Output: jumlah warga dengan usia lebih atau sama dengan 1t7 tahun dan bukan seorang tentara
 def jumlah_warga_dengan_hak_pilih(warga)
-  0
+  warga.select { |individu| individu[:usia] >= 17 && individu[:profesi] != 'tentara' }.length
 end
 
 # Hasil seharusnya 3, yaitu Ujang, Beni dan Yani
